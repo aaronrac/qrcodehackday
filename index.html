@@ -8,6 +8,7 @@
 
         #main {
             display: flex;
+            flex-wrap: wrap;
         }
 
         .item {
@@ -22,6 +23,8 @@
             background-color: #FFD100;
             text-decoration: none;
             color: #444;
+            font-family: "Stag Sans Web","Helvetica Neue";
+            
         }
 
         a {
@@ -37,19 +40,53 @@
             ;
 
         }
+
+        img {
+            height: 100px;
+        }
+        #info {
+text-align: center;
+        }
+
+        #info h1 {
+          
+        }
     </style>
 </head>
 
 <body>
+    <div id="info">
+        <img src="https://rac.com.au/assets/img/RAC-site-logo.png?v=45324" />
+        <h1>We're here to help</h1>
+        <p>If it's time to claim, simply select your policy and review your options.</p>
+    </div>
     <div id="main">
+    
         <a href="https://racinsurance.rac.com.au/Claim2/Preamble/NewCarClaim">
-            <div class="item">Car</div>
+            <div class="item"><img
+                    src="https://www-cdn.rac.com.au/-/media/images/rac-website/home-and-life/insurance/graphic/car-icon.svg?modified=20170807080715" />Car
+            </div>
         </a>
         <a href="https://racinsurance.rac.com.au/claims/home/building-and-contents">
-            <div class="item">Building</div>
+            <div class="item"><img
+                    src="https://www-cdn.rac.com.au/-/media/images/rac-website/home-and-life/insurance/graphic/home-icon.svg?modified=20170818023230" />Building
+            </div>
         </a>
+        <a href="https://forms.racq.com.au/web-plugin/servlet/SmartForm.html?formCode=racwa-pet-claim-auth">
+            <div class="item"><img
+                    src="https://www-cdn.rac.com.au/-/media/images/rac-website/home-and-life/insurance/graphic/grfx_pet/grfx_pet.svg?modified=20170913014336" />
+                Pet</div>
+        </a>
+
         <a href="https://racinsurance.rac.com.au/Claim">
-            <div class="item">Motorcycle</div>
+            <div class="item"><img
+                    src="https://www-cdn.rac.com.au/-/media/images/rac-website/home-and-life/insurance/graphic/motorcycle-icon.svg?modified=20170818062325" />
+                Motorcycle</div>
+            </a>
+            <a href="https://rac.com.au/home-life/bike-insurance/make-a-claim">
+                <div class="item"><img
+                        src="https://www-cdn.rac.com.au/-/media/images/rac-website/home-and-life/insurance/graphic/grfx_bicycle.svg?modified=20170915084318" />
+                    bicycle </div>
         </a>
 
     </div>
