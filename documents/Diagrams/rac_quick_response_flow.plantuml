@@ -1,12 +1,11 @@
 @startuml
 ' !theme materia
 
-title RAC Quick Response Claim Flow
+title RAC Vehicle Quick Response Claim Flow
 
 ' :Navigate to [[https://agreeable-hill-03062d410.2.azurestaticapps.net/]];
 
 start
-
 
 :Obtain RAC vehicle insurance;
 
@@ -15,25 +14,28 @@ note left: Policy identification number \n is embedeed into the QR Code.
 
 :Policy holder places the sticker on their windscreen.;
 
-if (Accident occurs) then (Yes)
+:Accidents occurs;
 
-    if (Are you at fault) then (Yes)
+switch (Are you at fault)
+    case(Yes)
         #lightgreen :Scan the QR code from your phone;
-        note left: Takes the user to the claim screen \n User's vehicle and policy holder fields are prepopulated;
-    
+
+        #lightgreen :Redirect to claim selection landing page;
+
+        #lightgreen :Select claim type, redirect to claim page. \n User's policy holder id can be prepopulated.;
+
         #lightgreen: Fill out the remaining part of the claim form;
 
         #lightgreen: Finish;
-
-    else (No)
-       :Keep being a safe driver;
+    case (Also Yes)
+        #orange :Call RAC!;
         stop
-    endif
+    case(No)
+        :Keep driving safely;
+        stop;
+endswitch
 
-else (No)
-    :Keep being a safe driver;
-    stop
-endif
+
 
 
 
