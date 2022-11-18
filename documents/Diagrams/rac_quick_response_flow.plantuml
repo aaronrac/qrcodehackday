@@ -1,11 +1,12 @@
 @startuml
 ' !theme materia
 
-title RAC Quick Response Flow
+title RAC Quick Response Claim Flow
+
+' :Navigate to [[https://agreeable-hill-03062d410.2.azurestaticapps.net/]];
 
 start
 
-:Navigate to [[https://agreeable-hill-03062d410.2.azurestaticapps.net/]];
 
 :Obtain RAC vehicle insurance;
 
